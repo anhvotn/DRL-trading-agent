@@ -21,6 +21,21 @@ python -m drl_trader.run --csv spy_15m.csv --ppy 6552             # your data
 python -m drl_trader.run --csv spy_15m.csv --transfer-csv qqq_15m.csv --ppy 6552 --windows 20,40,80 --seeds 3
 ```
 
+## Getting real data from Interactive Brokers
+
+With TWS running (paper login is fine, API enabled under File > Global Configuration > API > Settings):
+
+```
+pip install ib_async
+python ib_test.py                                   # checks the connection
+python download_ib_history.py --years 16            # SPY 15-min bars -> data/spy_15m.csv
+python download_ib_history.py --years 16 --with-spread   # adds bid/ask for the slippage model
+python -m drl_trader.run --csv data/spy_15m.csv --ppy 6552
+```
+
+The downloader saves after every week of data, so it can be stopped with Ctrl+C and resumed by
+running the same command. Downloaded data stays out of git (see `.gitignore`).
+
 ## Repository layout
 
 ```
