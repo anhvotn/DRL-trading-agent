@@ -123,8 +123,8 @@ forward-filled to the bar frequency **using only information published before th
 | Robust to costs | holdout Sharpe > 0 at 2× costs |
 
 Then: `fine_tune()` on the newest data with a small learning rate → **paper trade** (demo account)
-for several weeks and compare live fills to the backtest cost model → go live with **micro size**
-(the transcript's "Microtrace" is most likely "micro trades"), with hard limits outside the agent:
+for several weeks and compare live fills to the backtest cost model → go live with **micro size**,
+with hard limits outside the agent:
 max position, daily loss stop, kill switch.
 
 ## 4. Demo results (synthetic market – pipeline validation only)
@@ -138,7 +138,7 @@ sentiment edge. A naive "trade the sign of sentiment" rule gets Sharpe ≈ 3.7 a
 
 The agent learned to hold positions through noise (turnover 0.03/bar, 10× less than the naive rule),
 so it beat the rule after costs. With a near-zero edge, the same pipeline produced Sharpe ≈ −1.3 on holdout and the checklist failed it.
-**This is the behaviour you want: it finds a real edge and rejects noise.** Real markets have far
+**This is the behaviour wanted: it finds a real edge and rejects noise.** Real markets have far
 weaker edges. A holdout Sharpe above ~2 on real intraday data usually means a bug or leakage, not alpha.
 
 ## 5. Suggested next steps
