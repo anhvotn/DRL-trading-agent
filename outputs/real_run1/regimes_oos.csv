@@ -1,0 +1,5 @@
+,total_return_%,sharpe,max_drawdown_%,turnover_per_bar,cost_drag_%,time_in_market_%,bars
+volatile,22.76,1.05,-15.51,0.0,0.01,100.0,5576.0
+steady,4.14,0.32,-9.0,0.0,0.0,100.0,7023.0
+up,23.09,1.5,-5.94,0.0,0.0,100.0,8511.0
+down,18.83,1.66,-9.96,0.0,0.0,100.0,4859.0
