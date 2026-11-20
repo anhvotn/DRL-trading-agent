@@ -4,6 +4,8 @@ A deep reinforcement learning trading system built end to end: raw data → clea
 features → environment → actor-critic agent (PPO) → out-of-sample backtest → go-live checklist →
 ensemble weighting.
 
+I built this agent based on the inputs from the Coursera course [Reinforcement Learning for Trading Strategies](https://www.coursera.org/learn/trading-strategies-reinforcement-learning) (New York Institute of Finance and Google Cloud), part of the Machine Learning for Trading Specialization. Sections 2 and 3 below map the course's development steps and go-live checks to the code.
+
 ![Demo equity curves by split](assets/demo_equity.png)
 *Demo on a synthetic market. Solid: agent net of costs; dashed: buy & hold. Validates the pipeline, not a strategy.*
 
